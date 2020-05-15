@@ -1,4 +1,4 @@
-import { ref, watch, computed, onMounted, getCurrentInstance } from 'vue'
+import { ref, watch, computed, getCurrentInstance } from 'vue'
 export const onConut = () => {
   // 声明组件上下文
   const { ctx } = getCurrentInstance()
@@ -24,10 +24,6 @@ export const onConut = () => {
   })
   // 计算VUEX
   const test = computed(() => ctx.$store.state.user.test)
-  // mount生命周期
-  onMounted(() => {
-    console.log('生命周期', ctx.$options.setup())
-  })
   return {
     count,
     add,
