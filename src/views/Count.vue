@@ -10,6 +10,7 @@ import { onConut } from './onCount'
 export default {
   setup () {
     const { count, add, restVuex } = onConut()
+
     return {
       count,
       add,
