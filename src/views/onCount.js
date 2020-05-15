@@ -26,7 +26,7 @@ export const onConut = () => {
   const test = computed(() => ctx.$store.state.user.test)
   // mount生命周期
   onMounted(() => {
-    console.log('生命周期')
+    console.log('生命周期', ctx.$options.setup())
   })
   return {
     count,
